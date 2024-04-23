@@ -86,6 +86,20 @@ function displayAfterTomorrowWeatherData(data) {
     nextDayTempElement.innerHTML = maxTempF + " F <br/> " + conditionText;
 
 }
+function displayInvalidCity(flag) {
+    let invalidMsg = document.getElementById("invalidmsg");
+    if(flag)
+  {
+    
+    invalidMsg.classList.remove("d-none");
+    invalidMsg.classList.add("d-block");
+}
+else
+{
+    invalidMsg.classList.remove("d-block");
+    invalidMsg.classList.add("d-none");
+}
+}
 
 // Main Function
 async function mainFunction(city = "london") {
@@ -94,9 +108,10 @@ async function mainFunction(city = "london") {
         displayCurrentWeatherData(weatherData);
         displayTomorrowWeatherData(weatherData);
         displayAfterTomorrowWeatherData(weatherData);
+        displayInvalidCity(false);
     }
     else {
-        alert("Invalid City Name");
+        displayInvalidCity(true);
     }
 }
 
