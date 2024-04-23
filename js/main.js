@@ -16,7 +16,7 @@ var Currentstatus = document.getElementById("status");
 
 //fetch API
 async function getWeatherData(city) {
-    let Response = await fetch(`http://api.weatherapi.com/v1/forecast.json?key=c99311638d304fd4992173524242004&q=${city}&days=3`)
+    let Response = await fetch(`https://api.weatherapi.com/v1/forecast.json?key=c99311638d304fd4992173524242004&q=${city}&days=3`)
     let waatherData = await Response.json();
     console.log(waatherData);
     return (waatherData);
@@ -94,3 +94,5 @@ async function mainFunction(city = "london") {
     displayTomorrowWeatherData(weatherData);
     displayAfterTomorrowWeatherData(weatherData);
 }
+
+mainFunction("london");
