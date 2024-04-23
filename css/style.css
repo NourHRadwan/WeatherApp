@@ -1,0 +1,49 @@
+.main {
+  background-image: url(../img/banner.png);
+  background-repeat: no-repeat;
+}
+
+.find:focus {
+  box-shadow: none !important;
+  border: none !important;
+}
+a
+{
+    color: inherit;
+}
+.nav-item
+{
+    transition: color 2s linear;
+}
+.nav-item:hover {
+  border-radius: 10px;
+  border: blue 2px solid;
+  color: darkblue;
+}
+
+::placeholder {
+  color: #3C5B6F !important; /* Change this color to your desired color */
+  opacity: 1;
+}
+
+footer {
+  background-color: #1e202b;
+}
+
+
+.card {
+  width: 35%;
+  background-color: #262936 !important;
+}
+.card-header {
+  background-color: #323544 !important;
+}
+#currentTemp
+{
+    font-size: 40px;
+}
+.fa-facebook-f,
+.fa-twitter,
+.fa-google-plus-g {
+  color: deepskyblue;
+}
