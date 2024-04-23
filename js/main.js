@@ -90,9 +90,14 @@ function displayAfterTomorrowWeatherData(data) {
 // Main Function
 async function mainFunction(city = "london") {
     let weatherData = await getWeatherData(city);
-    displayCurrentWeatherData(weatherData);
-    displayTomorrowWeatherData(weatherData);
-    displayAfterTomorrowWeatherData(weatherData);
+    if (!weatherData.error) { //handle error when user enter invalid city name
+        displayCurrentWeatherData(weatherData);
+        displayTomorrowWeatherData(weatherData);
+        displayAfterTomorrowWeatherData(weatherData);
+    }
+    else {
+        alert("Invalid City Name");
+    }
 }
 
 mainFunction("london");
