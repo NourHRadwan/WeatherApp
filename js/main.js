@@ -88,17 +88,15 @@ function displayAfterTomorrowWeatherData(data) {
 }
 function displayInvalidCity(flag) {
     let invalidMsg = document.getElementById("invalidmsg");
-    if(flag)
-  {
-    
-    invalidMsg.classList.remove("d-none");
-    invalidMsg.classList.add("d-block");
-}
-else
-{
-    invalidMsg.classList.remove("d-block");
-    invalidMsg.classList.add("d-none");
-}
+    if (flag) {
+
+        invalidMsg.classList.remove("d-none");
+        invalidMsg.classList.add("d-block");
+    }
+    else {
+        invalidMsg.classList.remove("d-block");
+        invalidMsg.classList.add("d-none");
+    }
 }
 
 // Main Function
